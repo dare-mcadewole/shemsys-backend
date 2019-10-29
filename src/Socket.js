@@ -15,14 +15,13 @@ import Events from './Events';
 
 const WMS_NAMESPACE = '/shemsys';
 
-class Socket extends EventEmitter {
-    
+class Socket extends EventEmitter {    
     /**
      * 
      * @param {*} server 
      */
     initialize (server) {
-
+        this._clients = [];
         Logger.info('Initializing Socket ...');
         var IO = SocketIO.listen(server, {
             origins: '*:*'
