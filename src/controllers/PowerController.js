@@ -12,7 +12,7 @@ export default class PowerController {
      */
     static async update (Socket, { body: { value } }, reply, next) {
         Store.power = value;
-        Socket.emit(Events.POWER_UPDATED, { value });
+        Socket.emit(Events.SHEMSYS_POWER_UPDATED, { value });
         Logger.info(`[POWER] Power is ${value}`);
         reply.send({ value });
     }

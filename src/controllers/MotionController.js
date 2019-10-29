@@ -12,7 +12,7 @@ export default class MotionController {
      */
     static async update (Socket, { body: { state } }, reply, next) {
         Store.motion = state;
-        Socket.emit(Events.MOTION_STATE_UPDATED, { state });
+        Socket.emit(Events.SHEMSYS_MOTION_STATE_UPDATED, { state });
         Logger.info(`[MOTION_STATE] Motion is now ${state}`);
         reply.send({ state });
     }
