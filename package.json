@@ -1,7 +1,7 @@
 {
-  "name": "wms",
+  "name": "shemsys",
   "version": "1.0.0",
-  "description": "RESTful API for Water Monitoring System",
+  "description": "RESTful API for Smart Home Electrical Management System",
   "main": "server.js",
   "scripts": {
     "serve": "node launch",

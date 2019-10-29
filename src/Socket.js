@@ -12,6 +12,7 @@ import SocketIO from 'socket.io';
 import EventEmitter from 'eventemitter3';
 import Logger from './Logger';
 import Events from './Events';
+import Store from './Store';
 
 const WMS_NAMESPACE = '/shemsys';
 
@@ -34,8 +35,8 @@ class Socket extends EventEmitter {
                     client.emit(Events.SHEMSYS_CURRENT_DATA, Store);
                 });
     
-                this.on(Events.SHEMSYS_MOTION_STATE_UPDATED, (data) => {
-                    client.emit(Events.SHEMSYS_MOTION_STATE, data);
+                this.on(Events.SHEMSYS_MOTION_STATE_UPDATED, ({ state }) => {
+                    client.emit(Events.SHEMSYS_MOTION_STATE, { state });
                 });
     
                 this.on(Events.SHEMSYS_POWER_UPDATED, ({ value }) => {
