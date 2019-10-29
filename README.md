@@ -1,15 +1,15 @@
-# WMS API
+# SHEMSYS API
 
 Backend API Framework for Water Supervisory Control Web Application
-| RESTify, Socket.io, Custom Console Logger, CORS, NeDB
+| Express, Socket.io, Custom Console Logger, CORS
 
 ## Demo
 
-Open the file `carl.html` under the `/public` directory in a browser
+Go to [Shemsys](https://shemsys.netlify.com)
 
 ## Installation
 
-- Clone this repo with `git clone [GIT_REPO]`
+- Clone this repo with `git clone https://github.com/dare-mcadewole/shemsys-backend.git`
 
 - `cd` into the cloned directory and run `npm i` to install npm modules
 
@@ -25,5 +25,5 @@ npm run serve
 
 ## Authors/Contributors
 
-Dare McAdewole
+Dare McAdewole   
 Contact me via [Gmail](mailto://dare.dev.adewole@gmail.com)
